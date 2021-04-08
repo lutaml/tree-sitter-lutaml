@@ -1,0 +1,82 @@
+diagram MyView {
+// <- keyword
+//       ^ constant
+//             ^ punctuation.bracket
+
+  title "my diagram"
+  // <- keyword
+  //     ^ string
+
+  abstract class Test {
+  // <- keyword
+  //        ^ keyword
+  //             ^ constant
+  //                  ^ punctuation.bracket
+  }
+
+  class AddressClassProfile {
+  // <- keyword
+  //             ^ constant
+  //                        ^ punctuation.bracket
+
+    addressClassProfile
+    // ^ identifier
+
+    definition {
+    // <- label
+    //         ^ punctuation.bracket
+
+      test definition
+    //     ^ string
+      test definition
+
+      \n \{ \}
+//    ^ string
+//     ^ string
+//       ^ string.escape
+//        ^ string.escape
+//          ^ string.escape
+//           ^ string.escape
+    }
+  }
+//^ punctuation.bracket
+
+  class AttributeProfile {
+  //                     ^ punctuation.bracket
+  // <- keyword
+    attributeProfile
+  }
+//^ punctuation.bracket
+
+  association BidirectionalAssociation {
+  //                                   ^ punctuation.bracket
+  // <- keyword
+    owner_type aggregation
+    // <- keyword
+    member_type direct
+    owner AddressClassProfile#addressClassProfile
+    member AttributeProfile#attributeProfile [0..*]
+    //                                       ^ punctuation.bracket
+    //                                        ^ attribute
+  }
+//^ punctuation.bracket
+
+  association DirectAssociation {
+  //          ^ constant
+  //                            ^ punctuation.bracket
+  // <- keyword
+    member_type direct
+    owner AddressClassProfile
+    member AttributeProfile#attributeProfile
+  }
+//^ punctuation.bracket
+
+  association ReverseAssociation {
+  // <- keyword
+    owner_type aggregation
+    owner AddressClassProfile#addressClassProfile
+    member AttributeProfile
+  }
+//^ punctuation.bracket
+}
+//<- punctuation.bracket

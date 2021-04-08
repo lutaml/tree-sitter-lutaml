@@ -1,0 +1,25 @@
+=====
+Includes
+=====
+
+diagram MyView {
+  fontname "Arial"
+  title "my diagram"
+  include shared.lutaml
+  include shared1.lutaml
+}
+
+---
+
+(program
+ (diagram
+  (diagramId)
+  (diagramBlock
+   (diagramAttrPair
+    (diagramAttrName)
+    (diagramAttrValue))
+   (diagramAttrPair
+    (diagramAttrName)
+    (diagramAttrValue))
+   (includeStatement
+    (includeFileName)))))

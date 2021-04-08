@@ -1,0 +1,7 @@
+#!/bin/bash
+
+known_failures="$(cat script/known-failures.txt)"
+
+tree-sitter parse -q -t \
+  examples/**/*.lutaml \
+  "$(for failure in "${known_failures[@]}"; do echo "!${failure}"; done)"

@@ -1,0 +1,35 @@
+diagram Comments {
+// <- keyword
+//       ^ constant
+//               ^ punctuation.bracket
+
+  *| hello |*
+//^ comment
+// ^ comment
+//  ^ comment
+//   ^ comment
+//    ^ comment
+//     ^ comment
+//      ^ comment
+//       ^ comment
+//        ^ comment
+//         ^ comment
+//          ^ comment
+
+  caption "sdlfkj"
+//^ keyword
+//        ^ string
+//         ^ string
+
+  *| hello
+  sldkf
+    sldkfj
+    multiline comment
+  |*
+
+  ** this is a comment
+
+  title "test title"
+  ** this is a comment
+}
+//<- punctuation.bracket

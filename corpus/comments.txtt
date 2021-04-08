@@ -1,0 +1,73 @@
+=====
+Comments
+=====
+
+diagram MyView {
+  title "my diagram"
+
+  ** My comment
+
+  class Component {}
+
+  *|
+    this is multiline
+    comment with {} special
+    chars/
+
+    +-|/
+  |*
+  class AddressClassProfile {
+    // TODO: write attributes
+    +addressClassProfile: CharacterString [0..1]
+  }
+
+  // TODO: description
+  class AttributeProfile {
+    ** this is attribute comment
+    imlicistAttributeProfile: CharacterString [0..1]
+    *| this is another comment line
+    with multiply lines
+    |*
+  }
+}
+
+---
+(program
+ (diagram
+  (diagramId)
+  (diagramBlock
+   (diagramAttrPair
+    (diagramAttrName)
+    (diagramAttrValue))
+   (commentDefinition)
+   (class
+    (classId)
+    (classBlock))
+   (commentMultilineDefinition)
+   (class
+    (classId)
+    (classBlock
+     (comment)
+     (attributeDefinition
+      (visibilityMod)
+      (attributeName)
+      (attributeType (attributeTypeString))
+      (cardinality (cardinalityBody (cardinalitySet) (cardinalitySet (int))))
+     )
+    ))
+   (comment)
+   (class
+    (classId)
+    (classBlock
+     (commentDefinition)
+     (attributeDefinition
+      (attributeName)
+      (attributeType (attributeTypeString))
+      (cardinality (cardinalityBody (cardinalitySet) (cardinalitySet (int))))
+     )
+     (commentMultilineDefinition)
+    )
+   )
+  )
+ )
+)

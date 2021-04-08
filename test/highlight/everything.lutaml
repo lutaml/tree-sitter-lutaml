@@ -1,0 +1,68 @@
+diagram MyView {
+  enum MyEnum {}
+
+  enum AddressClassProfile {
+    +addressClassProfile: CharacterString
+  }
+
+  data_type "Banking Information" {
+    "art code"
+    "CCT Number"
+  }
+
+  primitive Integer
+
+  title "My diagram"
+  caption "My custom caption"
+  fontname "Helvetica"
+
+  enum Profile {
+    // commented out implicitAttributeProfile: CharacterString
+    implicitAttributeProfile: CharacterString
+    +attributeProfile: CharacterString
+    -privateAttributeProfile: CharacterString
+    ~friendlyAttributeProfile: CharacterString
+    #protectedAttributeProfile: CharacterString
+  }
+
+  class Association {
+    +association: AssociationTypeName
+  }
+
+  class Type {
+    +endType: EndTypeName
+  }
+
+  association AssociatingTypeAndAssociation {
+    // type uses
+    // from Association#+association {subsets relationship}[*]
+    // to Type#+/endType {readOnly, subsets relatedElement} [1..*]
+  }
+
+  class Pet {}
+  class Cat {
+    generalize Pet
+  }
+
+  class Relationship {
+     +/relatedElement: Element[1..*] {union}
+    definition {
+      inner text
+    }
+
+  }
+  class Element {}
+
+  class Figure {
+    // Public attribute `radius`
+    + radius {
+      definition {
+        Radius of the Figure
+      }
+    }
+    // private attribute `filled`
+    - filled
+    // protected attribute `length`
+    # length
+  }
+}

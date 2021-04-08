@@ -1,0 +1,88 @@
+=====
+Simple diagram
+=====
+
+diagram MyView {
+  class Foo {}
+}
+
+---
+
+(program
+ (diagram (diagramId)
+  (diagramBlock
+   (class
+    (classId)
+    (classBlock)
+   )
+  )
+ )
+)
+
+=====
+Shared classes
+=====
+
+diagram Hello {
+  class Foo {}
+  class Doo {}
+  class Koo {}
+}
+
+---
+
+(program
+ (diagram
+  (diagramId)
+  (diagramBlock
+   (class
+    (classId)
+    (classBlock))
+   (class
+    (classId)
+    (classBlock))
+   (class
+    (classId)
+    (classBlock)))))
+
+=====
+Shared classes
+=====
+
+diagram Foo {
+  class AttributeProfile {
+    implicistAttributeProfile: CharacterString [0..1]
+    +attributeProfile: <<BasicDocument>> LocalizedString [0..1]
+  }
+}
+
+---
+
+(program
+ (diagram
+  (diagramId)
+  (diagramBlock
+   (class
+    (classId)
+    (classBlock
+     (attributeDefinition
+      (attributeName)
+      (attributeType
+       (attributeTypeString))
+      (cardinality
+       (cardinalityBody
+        (cardinalitySet)
+        (cardinalitySet
+         (int)))))
+     (attributeDefinition
+      (visibilityMod)
+      (attributeName)
+      (attributeType
+       (attributeKeyword
+        (attributeKeywordId))
+       (attributeTypeString))
+      (cardinality
+       (cardinalityBody
+        (cardinalitySet)
+        (cardinalitySet
+         (int))))))))))

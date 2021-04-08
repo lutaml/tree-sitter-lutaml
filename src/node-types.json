@@ -1,0 +1,1187 @@
+[
+  {
+    "type": "association",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "associationId",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "associationBlock",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "associationBlock",
+    "named": true,
+    "fields": {
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "\n",
+            "named": false
+          },
+          {
+            "type": "associationMemberDefinition",
+            "named": true
+          },
+          {
+            "type": "associationOwnerDefinition",
+            "named": true
+          },
+          {
+            "type": "associationXType",
+            "named": true
+          },
+          {
+            "type": "commentDefinition",
+            "named": true
+          },
+          {
+            "type": "commentMultilineDefinition",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "associationDirection",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "associationId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "associationMemberAttrname",
+    "named": true,
+    "fields": {
+      "member_end_attribute_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "deriveMod",
+          "named": true
+        },
+        {
+          "type": "visibilityMod",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "associationMemberCardinality",
+    "named": true,
+    "fields": {
+      "member_end_cardinality": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "cardinalityBody",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "associationMemberDefinition",
+    "named": true,
+    "fields": {
+      "member_end": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "memberId",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "associationMemberAttrname",
+          "named": true
+        },
+        {
+          "type": "associationMemberCardinality",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "associationMemberType",
+    "named": true,
+    "fields": {
+      "member_end_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "associationType",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "associationOwnerAttrname",
+    "named": true,
+    "fields": {
+      "owner_end_attribute_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "name",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "deriveMod",
+          "named": true
+        },
+        {
+          "type": "visibilityMod",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "associationOwnerCardinality",
+    "named": true,
+    "fields": {
+      "owner_end_cardinality": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "cardinalityBody",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "associationOwnerDefinition",
+    "named": true,
+    "fields": {
+      "owner_end": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "ownerId",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "associationOwnerAttrname",
+          "named": true
+        },
+        {
+          "type": "associationOwnerCardinality",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "associationOwnerType",
+    "named": true,
+    "fields": {
+      "owner_end_type": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "associationType",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "associationType",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "associationXType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "associationMemberType",
+          "named": true
+        },
+        {
+          "type": "associationOwnerType",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attributeDefinition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attributeName",
+          "named": true
+        },
+        {
+          "type": "attributeType",
+          "named": true
+        },
+        {
+          "type": "cardinality",
+          "named": true
+        },
+        {
+          "type": "classBlock",
+          "named": true
+        },
+        {
+          "type": "deriveMod",
+          "named": true
+        },
+        {
+          "type": "visibilityMod",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attributeKeyword",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "attributeKeywordId",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attributeKeywordId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "attributeName",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "attributeType",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "attributeKeyword",
+          "named": true
+        },
+        {
+          "type": "attributeTypeString",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "attributeTypeString",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "cardinality",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "cardinalityBody",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cardinalityBody",
+    "named": true,
+    "fields": {
+      "max": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "cardinalitySet",
+            "named": true
+          }
+        ]
+      },
+      "min": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "cardinalitySet",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "cardinalitySet",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "int",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "class",
+    "named": true,
+    "fields": {
+      "keyword": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "attributeKeyword",
+            "named": true
+          }
+        ]
+      },
+      "modifier": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "classModifier",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "classId",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "classBlock",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "classBlock",
+    "named": true,
+    "fields": {
+      "attributes": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "attributeDefinition",
+            "named": true
+          }
+        ]
+      },
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "\n",
+            "named": false
+          },
+          {
+            "type": "attributeDefinition",
+            "named": true
+          },
+          {
+            "type": "commentDefinition",
+            "named": true
+          },
+          {
+            "type": "commentMultilineDefinition",
+            "named": true
+          },
+          {
+            "type": "definition",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "classId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "classModifier",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "commentMultilineDefinition",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "dataType",
+    "named": true,
+    "fields": {
+      "keyword": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "attributeKeyword",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "dataTypeId",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "dataTypeBlock",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "dataTypeBlock",
+    "named": true,
+    "fields": {
+      "attributes": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "attributeDefinition",
+            "named": true
+          }
+        ]
+      },
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "\n",
+            "named": false
+          },
+          {
+            "type": "attributeDefinition",
+            "named": true
+          },
+          {
+            "type": "commentDefinition",
+            "named": true
+          },
+          {
+            "type": "commentMultilineDefinition",
+            "named": true
+          },
+          {
+            "type": "definition",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "dataTypeId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "definition",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "definitionBlock",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "definitionBlock",
+    "named": true,
+    "fields": {
+      "definition": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "definitionText",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "definitionText",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "definitionTextEscape",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "deriveMod",
+    "named": true,
+    "fields": {
+      "derived_modifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "/",
+            "named": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "diagram",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "diagramId",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "diagramBlock",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "diagramAttrName",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "diagramAttrPair",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "diagramAttrName",
+          "named": true
+        },
+        {
+          "type": "diagramAttrValue",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "diagramAttrValue",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "stringEscape",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "diagramBlock",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "association",
+          "named": true
+        },
+        {
+          "type": "class",
+          "named": true
+        },
+        {
+          "type": "commentDefinition",
+          "named": true
+        },
+        {
+          "type": "commentMultilineDefinition",
+          "named": true
+        },
+        {
+          "type": "dataType",
+          "named": true
+        },
+        {
+          "type": "diagramAttrPair",
+          "named": true
+        },
+        {
+          "type": "enum",
+          "named": true
+        },
+        {
+          "type": "includeStatement",
+          "named": true
+        },
+        {
+          "type": "primitive",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "diagramId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "enum",
+    "named": true,
+    "fields": {
+      "keyword": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "attributeKeyword",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "enumId",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "enumBlock",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enumBlock",
+    "named": true,
+    "fields": {
+      "attributes": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "attributeDefinition",
+            "named": true
+          }
+        ]
+      },
+      "members": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "\n",
+            "named": false
+          },
+          {
+            "type": "attributeDefinition",
+            "named": true
+          },
+          {
+            "type": "commentDefinition",
+            "named": true
+          },
+          {
+            "type": "commentMultilineDefinition",
+            "named": true
+          },
+          {
+            "type": "definition",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "enumId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "includeFileName",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "stringEscape",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "includeStatement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "includeFileName",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "memberId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ownerId",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "primitive",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "primitiveString",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "primitiveString",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "program",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "diagram",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "visibilityMod",
+    "named": true,
+    "fields": {
+      "visibility_modifier": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "#",
+            "named": false
+          },
+          {
+            "type": "+",
+            "named": false
+          },
+          {
+            "type": "-",
+            "named": false
+          },
+          {
+            "type": "~",
+            "named": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "\n",
+    "named": false
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "#",
+    "named": false
+  },
+  {
+    "type": "'",
+    "named": false
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "*",
+    "named": false
+  },
+  {
+    "type": "*|",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "..",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "0",
+    "named": false
+  },
+  {
+    "type": ":",
+    "named": false
+  },
+  {
+    "type": "<<",
+    "named": false
+  },
+  {
+    "type": ">>",
+    "named": false
+  },
+  {
+    "type": "[",
+    "named": false
+  },
+  {
+    "type": "]",
+    "named": false
+  },
+  {
+    "type": "abstract",
+    "named": false
+  },
+  {
+    "type": "aggregation",
+    "named": false
+  },
+  {
+    "type": "association",
+    "named": false
+  },
+  {
+    "type": "caption",
+    "named": false
+  },
+  {
+    "type": "class",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "commentDefinition",
+    "named": true
+  },
+  {
+    "type": "composition",
+    "named": false
+  },
+  {
+    "type": "data_type",
+    "named": false
+  },
+  {
+    "type": "definition",
+    "named": false
+  },
+  {
+    "type": "definitionTextEscape",
+    "named": true
+  },
+  {
+    "type": "diagram",
+    "named": false
+  },
+  {
+    "type": "direct",
+    "named": false
+  },
+  {
+    "type": "enum",
+    "named": false
+  },
+  {
+    "type": "fontname",
+    "named": false
+  },
+  {
+    "type": "from",
+    "named": false
+  },
+  {
+    "type": "generalization",
+    "named": false
+  },
+  {
+    "type": "include",
+    "named": false
+  },
+  {
+    "type": "inheritance",
+    "named": false
+  },
+  {
+    "type": "int",
+    "named": true
+  },
+  {
+    "type": "interface",
+    "named": false
+  },
+  {
+    "type": "member",
+    "named": false
+  },
+  {
+    "type": "member_type",
+    "named": false
+  },
+  {
+    "type": "owner",
+    "named": false
+  },
+  {
+    "type": "owner_type",
+    "named": false
+  },
+  {
+    "type": "primitive",
+    "named": false
+  },
+  {
+    "type": "stringEscape",
+    "named": true
+  },
+  {
+    "type": "title",
+    "named": false
+  },
+  {
+    "type": "to",
+    "named": false
+  },
+  {
+    "type": "uses",
+    "named": false
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "|*",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  },
+  {
+    "type": "~",
+    "named": false
+  }
+]

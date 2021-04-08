@@ -1,0 +1,206 @@
+=====
+Everything!
+=====
+
+diagram MyView {
+  enum MyEnum {}
+
+  enum AddressClassProfile {
+    +addressClassProfile: CharacterString
+  }
+
+  data_type "Banking Information" {
+    "art code"
+    "CCT Number"
+  }
+
+  primitive Integer
+
+  title "My diagram"
+  caption "My custom caption"
+  fontname "Helvetica"
+
+  enum Profile {
+    // commented out implicitAttributeProfile: CharacterString
+    implicitAttributeProfile: CharacterString
+    +attributeProfile: CharacterString
+    -privateAttributeProfile: CharacterString
+    ~friendlyAttributeProfile: CharacterString
+    #protectedAttributeProfile: CharacterString
+  }
+
+  class Association {
+    +association: AssociationTypeName
+  }
+
+  class Type {
+    +endType: EndTypeName
+  }
+
+  association AssociatingTypeAndAssociation {
+    // type uses
+    // from Association#+association {subsets relationship}[*]
+    // to Type#+/endType {readOnly, subsets relatedElement} [1..*]
+  }
+
+  class Pet {}
+  class Cat {
+    generalize Pet
+  }
+
+  class Relationship {
+     +/relatedElement: Element[1..*] {union}
+    definition {
+      inner text
+    }
+
+  }
+  class Element {}
+
+  class Figure {
+    // Public attribute `radius`
+    + radius {
+      definition {
+        Radius of the Figure
+      }
+    }
+    // private attribute `filled`
+    - filled
+    // protected attribute `length`
+    # length
+  }
+}
+---
+(program
+ (diagram
+  (diagramId)
+  (diagramBlock
+   (enum
+    (enumId)
+    (enumBlock))
+   (enum
+    (enumId)
+    (enumBlock
+     (attributeDefinition
+      (visibilityMod)
+      (attributeName)
+      (attributeType
+       (attributeTypeString)))))
+   (dataType
+    (dataTypeId)
+    (dataTypeBlock
+     (attributeDefinition
+      (attributeName))
+     (attributeDefinition
+      (attributeName))))
+   (primitive
+    (primitiveString))
+  (diagramAttrPair
+   (diagramAttrName)
+   (diagramAttrValue))
+  (diagramAttrPair
+   (diagramAttrName)
+   (diagramAttrValue))
+  (diagramAttrPair
+   (diagramAttrName)
+   (diagramAttrValue))
+  (enum
+   (enumId)
+   (enumBlock
+    (comment)
+    (attributeDefinition
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+  (attributeDefinition
+   (visibilityMod)
+   (attributeName)
+   (attributeType
+    (attributeTypeString)))))
+  (class
+   (classId)
+   (classBlock
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))))
+  (class
+   (classId)
+   (classBlock
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))))
+  (association
+   (associationId)
+   (associationBlock
+    (comment)
+    (comment)
+    (comment)))
+  (class
+   (classId)
+   (classBlock))
+  (class
+   (classId)
+   (classBlock
+    (attributeDefinition
+     (attributeName))))
+  (class
+   (classId)
+   (classBlock
+    (attributeDefinition
+     (visibilityMod)
+     (deriveMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString))
+     (cardinality
+      (cardinalityBody
+       (cardinalitySet
+        (int))
+       (cardinalitySet)))
+     (classBlock
+      (attributeDefinition
+       (attributeName))))
+    (definition
+     (definitionBlock
+      (definitionText)))))
+  (class
+   (classId)
+   (classBlock))
+  (class
+   (classId)
+   (classBlock
+    (comment)
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (classBlock
+      (definition
+       (definitionBlock
+        (definitionText)))))
+    (comment)
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName))
+    (comment)
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)))))))

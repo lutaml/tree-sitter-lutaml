@@ -1,0 +1,40 @@
+= tree-sitter-lutaml
+
+image:https://github.com/lutaml/tree-sitter-lutaml/actions/workflows/ci.yml/badge.svg["Build/test", link=https://github.com/lutaml/tree-sitter-lutaml/actions/workflows/ci.yml]
+
+Lutaml grammar for https://github.com/tree-sitter/tree-sitter[tree-sitter].
+
+
+== Development
+
+Install the dependencies:
+
+[source,bash]
+----
+npm install
+----
+
+Build and run the tests:
+
+[source,bash]
+----
+npm run build
+npm run test
+----
+
+Run the build and tests in watch mode:
+
+[source,bash]
+----
+npm run test:watch
+----
+
+
+== References
+
+* https://github.com/lutaml/lutaml-uml/blob/master/LUTAML.adoc[LutaML syntax]
+
+=== Inspirations
+
+* https://github.com/tree-sitter/tree-sitter-bash[tree-sitter-bash]
+* https://github.com/tree-sitter/tree-sitter-ruby[tree-sitter-ruby]

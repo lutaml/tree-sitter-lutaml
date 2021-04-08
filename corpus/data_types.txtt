@@ -1,0 +1,129 @@
+=====
+Data types
+=====
+
+diagram MyView {
+  title "my diagram"
+
+  enum MyEnum {}
+
+  enum AddressClassProfile <<my_keyword>> {
+    +addressClassProfile: CharacterString
+  }
+
+  data_type "Banking Information" {
+    definition {
+      Common code types used in banking.
+    }
+    "art code" {
+      definition {
+        The bank ART code.
+      }
+    }
+    "CCT Number"
+  }
+
+  data_type DateTimeType {
+    definition {
+      Type of date time value.
+    }
+    year {
+      definition {
+        The value only provides year.
+      }
+    }
+    monthYear
+    dayMonthYear
+  }
+
+  primitive Integer
+
+  enum Profile {
+    implicistAttributeProfile: CharacterString
+    +attributeProfile: CharacterString
+    -privateAttributeProfile: CharacterString
+    ~friendlyAttributeProfile: CharacterString
+    #protectedAttributeProfile: CharacterString
+  }
+}
+
+---
+
+(program
+ (diagram
+  (diagramId)
+  (diagramBlock
+   (diagramAttrPair
+    (diagramAttrName)
+    (diagramAttrValue))
+   (enum
+    (enumId)
+    (enumBlock))
+   (enum
+    (enumId)
+    (attributeKeyword (attributeKeywordId))
+    (enumBlock
+     (attributeDefinition
+      (visibilityMod)
+      (attributeName)
+      (attributeType
+       (attributeTypeString)))))
+   (dataType
+    (dataTypeId)
+    (dataTypeBlock
+     (definition
+      (definitionBlock
+       (definitionText)))
+     (attributeDefinition
+      (attributeName)
+      (classBlock
+       (definition
+        (definitionBlock
+         (definitionText)))))
+     (attributeDefinition
+      (attributeName))))
+  (dataType
+   (dataTypeId)
+   (dataTypeBlock
+    (definition
+     (definitionBlock
+      (definitionText)))
+    (attributeDefinition
+     (attributeName)
+     (classBlock
+      (definition
+       (definitionBlock
+        (definitionText)))))
+    (attributeDefinition
+     (attributeName))
+    (attributeDefinition
+     (attributeName))))
+  (primitive
+   (primitiveString))
+  (enum
+   (enumId)
+   (enumBlock
+    (attributeDefinition
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString)))
+    (attributeDefinition
+     (visibilityMod)
+     (attributeName)
+     (attributeType
+      (attributeTypeString))))))))
