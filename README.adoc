@@ -32,7 +32,7 @@ npm run test:watch
 
 == References
 
-* https://github.com/lutaml/lutaml-uml/blob/master/LUTAML.adoc[LutaML syntax]
+* https://www.lutaml.org/docs/documents/lutaml-lang.html#_core_syntax[LutaML syntax]
 
 === Inspirations
 
