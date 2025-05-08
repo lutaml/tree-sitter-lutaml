@@ -64,7 +64,7 @@ module.exports = grammar({
       optional(seq(
         $._diagramBlockContent,
         repeat(seq(NEWLINE, $._diagramBlockContent)),
-        optional(NEWLINE)
+        optional(NEWLINE),
       )),
       '}',
     ),
@@ -85,7 +85,7 @@ module.exports = grammar({
         optional(seq(
           $._associationBlock,
           repeat(seq(NEWLINE, $._associationBlock)),
-          optional(NEWLINE)
+          optional(NEWLINE),
         )),
       ), '}',
     ),
@@ -146,7 +146,7 @@ module.exports = grammar({
     attributeTypeString: $ => choice(
       token(ATTRIBUTE_TYPE_NO_SURROUNDING_SPACE_RE),
       seq('"', optional(token(ATTRIBUTE_TYPE_RE)), '"'),
-      seq("'", optional(token(ATTRIBUTE_TYPE_RE)), "'"),
+      seq('\'', optional(token(ATTRIBUTE_TYPE_RE)), '\''),
     ),
 
     class: $ => seq(
@@ -162,14 +162,14 @@ module.exports = grammar({
 
     classBlock: $ => seq('{', field('members', optional($._commonBlockStatementList)), '}'),
 
-    _commonBlockStatement : $ => choice(
+    _commonBlockStatement: $ => choice(
       $.definition,
       field('attributes', $.attributeDefinition),
       $.commentDefinition,
       $.commentMultilineDefinition,
     ),
 
-    _commonBlockStatementList : $ => seq(
+    _commonBlockStatementList: $ => seq(
       $._commonBlockStatement,
       repeat(seq(NEWLINE, $._commonBlockStatement)),
       optional(NEWLINE),
@@ -184,7 +184,7 @@ module.exports = grammar({
 
     attributeName: $ => choice(
       token(seq('"', ATTRIBUTE_NAME_RE, '"')),
-      token(seq("'", ATTRIBUTE_NAME_RE, "'")),
+      token(seq('\'', ATTRIBUTE_NAME_RE, '\'')),
       token(ATTRIBUTE_NAME_NO_SURROUNDING_SPACE_RE),
     ),
 
@@ -204,7 +204,7 @@ module.exports = grammar({
     primitiveString: $ => choice(
       token(CLASS_NAME_NO_SURROUNDING_SPACE_RE),
       seq('"', repeat(choice(/\\"/, token(CLASS_NAME_RE))), '"'),
-      seq("'", repeat(choice(/\\'/, token(CLASS_NAME_RE))), "'"),
+      seq('\'', repeat(choice(/\\'/, token(CLASS_NAME_RE))), '\''),
     ),
 
     dataType: $ => seq(
@@ -218,7 +218,7 @@ module.exports = grammar({
     dataTypeId: $ => choice(
       $._classId,
       seq('"', optional($._classId), '"'),
-      seq("'", optional($._classId), "'"),
+      seq('\'', optional($._classId), '\''),
     ),
 
     enumId: $ => token(CLASS_NAME_RE),
@@ -261,7 +261,7 @@ module.exports = grammar({
       $._stringNoQuote,
     ),
 
-    _stringSingleQuote: $ => seq("'", repeat(choice(/[^\\'\n]/, $.stringEscape)), "'"),
+    _stringSingleQuote: $ => seq('\'', repeat(choice(/[^\\'\n]/, $.stringEscape)), '\''),
     _stringDoubleQuote: $ => seq('"', repeat(choice(/[^\\"\n]/, $.stringEscape)), '"'),
     _stringNoQuote: $ => seq(token(/[^"'\n]/), repeat(choice(/[^\\"'\n]/, $.stringEscape))),
 
@@ -270,5 +270,5 @@ module.exports = grammar({
     commentDefinition: $ => token(seq('**', /[^\n]*/)),
     comment: $ => token(seq('//', /.*/)),
 
-  }
+  },
 });
