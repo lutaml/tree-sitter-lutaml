@@ -32,8 +32,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Set up tree-sitter
         uses: tree-sitter/setup-action/cli@v1
+
+      - name: Generate parser
+        shell: bash
+        run: tree-sitter generate
+
       - name: Run tests
         uses: tree-sitter/parser-test-action@v2
         with:
@@ -43,8 +49,9 @@ jobs:
           test-go: true
           test-swift: ${{runner.os == 'macOS'}}
           test-zig: true
+
       - name: Parse examples
         uses: tree-sitter/parse-action@v4
         with:
           files: |
-            script/parse-examples/**
+            examples/**
