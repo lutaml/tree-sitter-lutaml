@@ -5,12 +5,14 @@
   "main": "bindings/node",
   "types": "bindings/node",
   "scripts": {
+    "init": "tree-sitter init",
     "generate": "tree-sitter generate",
     "install": "node-gyp-build",
     "lint": "eslint grammar.js",
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
-    "test": "tree-sitter test && script/parse-examples"
+    "test:custom": "tree-sitter test && script/parse-examples",
+    "test": "node --test bindings/node/*_test.js"
   },
   "files": [
     "grammar.js",
