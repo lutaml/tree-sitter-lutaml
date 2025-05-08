@@ -8,9 +8,20 @@
     "generate": "tree-sitter generate",
     "install": "node-gyp-build",
     "lint": "eslint grammar.js",
+    "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
     "test": "tree-sitter test && script/parse-examples"
   },
+  "files": [
+    "grammar.js",
+    "tree-sitter.json",
+    "binding.gyp",
+    "prebuilds/**",
+    "bindings/node/*",
+    "queries/*",
+    "src/**",
+    "*.wasm"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lutaml/tree-sitter-lutaml.git"
