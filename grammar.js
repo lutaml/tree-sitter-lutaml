@@ -1,3 +1,6 @@
+/// <reference types="tree-sitter-cli/dsl" />
+// @ts-check
+
 const NEWLINE = '\n';
 
 // const NAME_RE = /[a-zA-Z0-9 _-][a-zA-Z0-9 _-+/]*/;
