@@ -1,26 +1,36 @@
 [package]
 name = "tree-sitter-lutaml"
-description = "lutaml grammar for the tree-sitter parsing library"
-version = "0.0.1"
-keywords = ["incremental", "parsing", "lutaml"]
-categories = ["parsing", "text-editors"]
-repository = "https://github.com/tree-sitter/tree-sitter-javascript"
-edition = "2018"
+description = "LutaML grammar for tree-sitter"
+version = "0.1.0"
+authors = [
+  "Jeffrey Lau <jeffrey.lau@ribose.com>",
+]
 license = "MIT"
+readme = "README.adoc"
+keywords = ["incremental", "parsing", "tree-sitter", "lutaml"]
+categories = ["parsing", "text-editors"]
+repository = "https://github.com/lutaml/tree-sitter-lutaml"
+edition = "2021"
+autoexample = false
 
 build = "bindings/rust/build.rs"
 include = [
+  "LICENSE.adoc",
   "bindings/rust/*",
   "grammar.js",
   "queries/*",
   "src/*",
+  "tree-sitter.json",
 ]
 
 [lib]
 path = "bindings/rust/lib.rs"
 
 [dependencies]
-tree-sitter = "0.17"
+tree-sitter-language = "0.1"
 
 [build-dependencies]
-cc = "1.0"
+cc = "1.1"
+
+[dev-dependencies]
+tree-sitter = "0.24"
