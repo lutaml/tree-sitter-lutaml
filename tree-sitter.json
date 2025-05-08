@@ -1,0 +1,40 @@
+{
+  "grammars": [
+    {
+      "name": "lutaml",
+      "camelcase": "Lutaml",
+      "scope": "source.lutaml",
+      "path": ".",
+      "file-types": [
+        "lml",
+        "lutaml"
+      ],
+      "highlights": "queries/highlights.scm",
+      "tags": "queries/tags.scm",
+      "injection-regex": "lutaml",
+      "first-line-regex": "#!.*\\blutaml$"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "LutaML grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Jeffrey Lau",
+        "email": "jeffrey.lau@ribose.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/lutaml/tree-sitter-lutaml"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}

@@ -27,21 +27,11 @@
   },
   "homepage": "https://github.com/lutaml/tree-sitter-lutaml#readme",
   "dependencies": {
-    "nan": "^2.14.2",
-    "prebuild-install": "^6.1.1"
+    "nan": "^2.22.2",
+    "prebuild-install": "^7.1.3"
   },
   "devDependencies": {
-    "prebuild": "^10.0.1",
-    "tree-sitter-cli": "^0.19.4"
-  },
-  "tree-sitter": [
-    {
-      "scope": "source.lutaml",
-      "file-types": [
-        "lutaml"
-      ],
-      "injection-regex": "lutaml",
-      "first-line-regex": "#!.*\\blutaml$"
-    }
-  ]
+    "prebuild": "^13.0.1",
+    "tree-sitter-cli": "^0.25.3"
+  }
 }

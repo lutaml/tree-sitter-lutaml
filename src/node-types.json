@@ -62,11 +62,6 @@
     }
   },
   {
-    "type": "associationDirection",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "associationId",
     "named": true,
     "fields": {}
@@ -936,6 +931,7 @@
   {
     "type": "program",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": false,
@@ -1070,7 +1066,8 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "commentDefinition",
@@ -1106,10 +1103,6 @@
   },
   {
     "type": "fontname",
-    "named": false
-  },
-  {
-    "type": "from",
     "named": false
   },
   {
@@ -1158,10 +1151,6 @@
   },
   {
     "type": "title",
-    "named": false
-  },
-  {
-    "type": "to",
     "named": false
   },
   {
