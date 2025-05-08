@@ -10,6 +10,7 @@
     "install": "node-gyp-build",
     "lint": "eslint grammar.js",
     "prestart": "tree-sitter build --wasm",
+    "prebuildify": "prebuildify --napi --strip",
     "start": "tree-sitter playground",
     "test:custom": "tree-sitter test && script/parse-examples",
     "test": "node --test bindings/node/*_test.js"
